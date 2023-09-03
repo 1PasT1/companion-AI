@@ -1,0 +1,50 @@
+<div class="games-main">
+<div class="games-background">
+  <div class="games-gradient"></div>
+</div>
+
+<div class="hero">
+<div class="content-main">
+  <app-slider [title]="'პოპულარული თამაშები'" [slidesStore]="slidesStore" [customOptions]="customOptions"></app-slider>
+</div>
+<div class="content-main p-t-0">
+  <app-slider [title]="'ახალი თამაშები'" [slidesStore]="slidesStoreSecond" [customOptions]="customOptions"></app-slider>
+</div>
+
+
+<div class="all-games-div">
+  <span class="all-games-text">ყველა თამაში</span>
+  <div class="row">
+    <div class="col-md-4 all-games-left">
+      <div
+        class="title"
+        *ngFor="let slide of slidesStoreThird; let index = index"
+        (click)="choseTitle(index)"
+        [class.active]="defChosen && index === 0 || chosenIndex === index"
+      >
+        {{ slide.title }}
+      </div>
+    </div>
+    <div class="col-md-6 all-games-right">
+      <div class="pic" *ngFor="let slide of slidesStoreThird; let index = index">
+        <ng-container *ngIf="chosenIndex === index">
+          <img data-aos="fade-left" [src]="slide.src" alt="" />
+          <h3 class="all-games-slider-title" data-aos="fade-left">{{slide.title}}</h3>
+          <span class="all-games-slider-description" data-aos="fade-left">{{slide.description }}</span>
+        </ng-container>
+      </div>
+      <ng-container *ngIf="chosenIndex === -1">
+        <div class="pic" *ngFor="let slide of slidesStoreThird; let index = index">
+          <ng-container *ngIf="index === 0">
+            <img data-aos="fade-left" [src]="slide.src" alt="" />
+            <h3 class="all-games-slider-title" data-aos="fade-left">{{slide.title}}</h3>
+            <span class="all-games-slider-description" data-aos="fade-left">{{slide.description }}</span>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
