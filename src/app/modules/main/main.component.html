@@ -1,55 +1,68 @@
-<h3 class="main-title">Tägliche Angeboten</h3>
-<div class="container">
-  <app-slider
-    [slidesStore]="slidesStore"
-    [customOptions]="customOptions"
-  ></app-slider>
+<div class="registration">
+  <div class="left primary-bg-color">
+    <div class="left-bg-image"></div>
+      <a href="">
+        <div class="go-back-div">
+          <img src="/assets/img/arrow-left.png" alt="">
+          <h4 class="primary-font-color">Back to home</h4>
+        </div>
+      </a>
+    <form class="left-form" action="">
+        <h2 class="primary-font-color">Get <span class="secondary-font-color left-form-txt">more</span> from your meetings</h2>
+        <p class="form-border"><svg width="392" height="1" viewBox="0 0 392 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="0.5" x2="392" y2="0.5" stroke="white" stroke-opacity="0.4" stroke-dasharray="10 10"/>
+          </svg>
+          </p>
+        <ul class="primary-font-color offer-list-ul">  
+          <li class="offer-list-li"> <img src="/assets/img/attach-circle.png" alt=""> Upload and share files easily</li>
+          <li class="offer-list-li"> <img src="/assets/img/video.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="offer-list-li"> <img src="/assets/img/messages.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="offer-list-li"> <img src="/assets/img/device-message.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="offer-list-li"> <img src="/assets/img/calendar-edit.png" alt=""> Manage your schedule or view your teammates' scheduled meetings</li>
+          <li class="offer-list-li"> <img src="/assets/img/document-text.png" alt=""> Use a common document for the group, work together around the project</li>
+        </ul>
+    </form>
+  </div>
 
-  <div class="inside-view-main">
-    <div class="inside-view-container">
-      <h3>Die Innenansicht</h3>
-      <div class="live-music-main">
-        <h4 data-aos="zoom-in" style="margin-bottom: 25px;">Live music</h4>
-          <div class="row aligner aligners">
-            <div class="col-md-6">
-              <div class="t">
-                <span data-aos="fade-right" class="live-music-text">Am ersten Samstag des Monats laden wir Musiker aus
-                  dem sonnigen Griechenland zu uns ein. Musik, Lieder und
-                  Tänze machen Ihren Abend Lustig und interessant.
-                  Tischreservierungen werden telefonisch entgegengenommen. 
-                  Wir freuen uns auf ihren Besuch.
-                </span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div data-aos="zoom-in"  class="music-img-div"><img class="music-img" src="/assets/img/music img.jpg" alt=""></div>
-            </div>
-          </div>
-      </div>
 
-      <div class="pickup-order-main">
-      <div data-aos="zoom-in" class="pickup-order-text-container">
-        <div class="pickup-order-title-container">
-          <h4>Abhol Angebot</h4>
-          <h4 style="color: #FD7E14;">-10.50€</h4>
+  <div class="right secondary-bg-color">
+    <div class="right-form-gap">
+      <form class="right-form" action="">
+        <div class="right-form-txts">
+         <h3>Hello again!</h3>
+         <span class="tertiary-font-color right-from-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
         </div>
-        <span class="pickup-order-text">Bestellen Sie essen zu mit nehmen auf unserer Abhol Angebot oder wählen Sie ein Gericht nach Ihrem Geschmack aus unserer Speisekarte.</span>
-      </div>
-      <div class="row aligner alignerss" style="flex-direction: row-reverse;">
-        <div class="col-md-6">
-          <div data-aos="zoom-in-left" class="pickup-order-menu">
-            <span>94a. Gyros</span>
-            <span>62a. Suflaki — meat skewers</span>
-            <span>68a. Leber vom Schwein</span>
-            <span>95a. Gyros — Pfännchen</span>
-            <span>70a. Suzukia — Hackfleisch</span>
-            <span class="pickup-order-text-second">Zu allen Fleischgerichten gehört Reis oder Pommes und gemischter Salat dazu.</span>
-          </div>
-        </div>
-        <div class="col-md-6">
-        <div data-aos="zoom-in" class="order-img-div"><img class="order-img" src="/assets/img/shop img.jpg" alt=""></div>
-        </div>
-      </div>
+         <a class="forth-font-color" href="">
+           <div class="general-google-btn">
+             <img class="general-google-icon" src="/assets/img/google-icon.png" alt="">
+             <h5>Sign in with Google</h5>
+           </div>
+         </a>
+         <p class="fifth-font-color">or</p>
+           <div class="input-div">
+             <input class="general-input" type="text" placeholder="Email Address">
+             <div class="general-input-container">
+               <input class="general-input" type="password" placeholder="Password">
+               <span class="general-input-icon">
+                 <img src="/assets/img/eye.png" alt="">
+               </span>
+             </div>
+   
+             <div class="save-checkbox-div-main">
+               <div class="save-checkbox-div">
+                 <input class="general-checkbox general-checkbox-crossed" type="checkbox" id="remember-checkbox">
+                 <label class="tertiary-font-color " for="remember-checkbox general-checkbox-crossed" >Remember for 30 days</label>
+               </div>
+               <a href="">Forgot Password?</a>
+             </div>
+           </div>
+         <div>
+         </div>
+      </form>
+       <div class="general-submit-div">
+         <button class="general-button">Sign In</button>
+         <p class="tertiary-font-color general-button-bottom-txt">New to Companion AI? <a href="">Create account?</a></p>
+       </div>  
     </div>
   </div>
 </div>
