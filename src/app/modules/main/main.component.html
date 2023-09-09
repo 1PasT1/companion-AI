@@ -651,41 +651,51 @@
     <div class="primary-border-color general-progress-border"></div>
     <div class="secondary-border-color general-progress-border"></div>
    </div>
-    <div class="workspace-right-form-gap">
+    <div class="invite-your-teammate-right-form-gap">
       <form class="general-right-form nickname-right-form" action="">
         <div class="general-right-form-txts">
          <h3>Invite your team</h3>
          <span class="tertiary-font-color general-right-form-txt">Effortlessly share your meeting recordings and notes and retire the phrase “can i get a copy of that recording”.</span>
         </div>
-        <div class="input-container">
-            <input class="general-input" type="text" placeholder="Add member’s email">
 
-            <div class="custom-dropdown general-role-select custom-dropdown-large" (click)="toggleDropdownLarge()">
-              <div class="selected-option selected-role-option selected-option-large" [style]="dropdownStyleLarge">
-                <ng-container *ngIf="selectedOptionLarge; else placeholderTextLarge">
-                  <span class="selected-text selected-text-large">{{ selectedOptionLarge }}</span>
-                </ng-container>
-                <ng-template #placeholderTextLarge>
-                  <span class="placeholder-text placeholder-text-large">
-                    Role
-                  </span>
-                </ng-template>
-                <ng-container *ngIf="isDropdownOpenLarge">
-                  <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon dropdown-icon-large" (click)="closeDropdownLarge()">
-                </ng-container>
-                <ng-container *ngIf="!isDropdownOpenLarge">
-                  <img src="/assets/img/arrow-down.png" alt="Closed Icon" class="dropdown-icon dropdown-icon-large" (click)="openDropdownLarge()">
-                </ng-container>
-              </div>
-              <div class="general-options general-role-options general-options-large" *ngIf="isDropdownOpenLarge" >
-                <div class="general-option general-option-large" (click)="selectOptionLarge('Option 1')">Option 1</div>
-                <div class="general-option general-option-large" (click)="selectOptionLarge('Option 2')">Option 2</div>
-                <div class="general-option general-option-large" (click)="selectOptionLarge('Option 3')">Option 3</div>
-              </div>
+          <div class="input-button-gap">
+            <div class="input-container">
+              <input class="general-input" type="text" placeholder="Add member’s email">
+  
+              <!-- <div class="custom-dropdown general-role-select custom-dropdown-large" (click)="toggleDropdownLarge()">
+                <div class="selected-option selected-role-option selected-option-large" [style]="dropdownStyleLarge">
+                  <ng-container *ngIf="selectedOptionLarge; else placeholderTextLarge">
+                    <span class="selected-text selected-text-large">{{ selectedOptionLarge }}</span>
+                  </ng-container>
+                  <ng-template #placeholderTextLarge>
+                    <span class="placeholder-text placeholder-text-large">
+                      Role
+                    </span>
+                  </ng-template>
+                  <ng-container *ngIf="isDropdownOpenLarge">
+                    <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon dropdown-icon-large" (click)="closeDropdownLarge()">
+                  </ng-container>
+                  <ng-container *ngIf="!isDropdownOpenLarge">
+                    <img src="/assets/img/arrow-down.png" alt="Closed Icon" class="dropdown-icon dropdown-icon-large" (click)="openDropdownLarge()">
+                  </ng-container>
+                </div>
+                <div class="general-options general-role-options general-options-large" *ngIf="isDropdownOpenLarge" >
+                  <div class="general-option general-option-large" (click)="selectOptionLarge('Option 1')">Option 1</div>
+                  <div class="general-option general-option-large" (click)="selectOptionLarge('Option 2')">Option 2</div>
+                  <div class="general-option general-option-large" (click)="selectOptionLarge('Option 3')">Option 3</div>
+                </div>
+              </div> -->
+              
             </div>
-            
+            <button class="disabled-button">Add new member</button>
           </div>
-          
+
+          <div class="member-list-div">
+            <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture-guest.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Guest</p> <span class="forth-font-color">shako@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+            <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Beka@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+            <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Ilia@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+            <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Andria@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+          </div>
       </form>
        <div class="general-submit-div">
          <button class="general-button">Next Step</button>
@@ -695,5 +705,149 @@
   </div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+
+<div class="general-div">
+  <div class="general-left primary-bg-color">
+    <div class="general-bg-image"></div>
+      <a href="">
+        <div class="general-go-back-div">
+          <img src="/assets/img/arrow-left.png" alt="">
+          <h4 class="primary-font-color">Back to home</h4>
+        </div>
+      </a>
+    <form class="general-left-form" action="">
+        <h2 class="primary-font-color">Get <span class="secondary-font-color general-left-form-txt">more</span> from your meetings</h2>
+        <p class="form-border"><svg width="392" height="1" viewBox="0 0 392 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="0.5" x2="392" y2="0.5" stroke="white" stroke-opacity="0.4" stroke-dasharray="10 10"/>
+          </svg>
+          </p>
+        <ul class="primary-font-color general-offer-list-ul">  
+          <li class="general-offer-list-li"> <img src="/assets/img/attach-circle.png" alt=""> Upload and share files easily</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/video.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/messages.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/device-message.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/calendar-edit.png" alt=""> Manage your schedule or view your teammates' scheduled meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/document-text.png" alt=""> Use a common document for the group, work together around the project</li>
+        </ul>
+    </form>
+  </div>
 
 
+  <div class="general-right secondary-bg-color">
+   <div class="general-progress-border-div">
+    <div class="primary-border-color general-progress-border"></div>
+    <div class="primary-border-color general-progress-border"></div>
+    <div class="primary-border-color general-progress-border"></div>
+    <div class="primary-border-color general-progress-border"></div>
+    <div class="primary-border-color general-progress-border"></div>
+   </div>
+    <div class="connect-platform-right-form-gap">
+      <form class="general-right-form nickname-right-form" action="">
+        <div class="general-right-form-txts">
+         <h3>Connect your platforms</h3>
+         <span class="tertiary-font-color general-right-form-txt connect-platform-right-form-txt">Have your recordings automatically uploaded to Companion AI for enhanced video summaries, transcriptions, and personalized annotations.</span>
+        </div>
+          <div class="connect-platform-div">
+            <div class="connect-platform-box"><img src="/assets/img/zoom-icon.png" alt=""> <p class="tertiary-font-color">Connect Zoom Account</p> <img class="connect-platform-link-icon" src="/assets/img/connect-icon.png" alt=""></div>
+            <div class="connect-platform-box"><img src="/assets/img/google-meet-icon.png" alt=""> <p class="tertiary-font-color">Google Account is Connected</p> <img src="/assets/img/connected-icon.png" alt=""></div>
+          </div>
+      </form>
+       <div class="general-submit-div">
+         <button class="general-button">OK! Let’s jump in</button>
+       </div>  
+    </div>
+  </div>
+
+  <!-- popup div -->
+
+  <div class="connect-popup-form-div">
+    <div class="connect-popup-form">
+      <div class="connect-popup-gap gap2">
+        <div class="connect-popup-gap">
+          <h3 class="connect-popup-txt">Connect to google Drive</h3>
+          <div class="connect-popup-images-div">
+            <div class="connect-popup-img-div"><img src="/assets/img/bot-wink3.png" alt=""></div>
+            <img src="/assets/img/arrow-2.png" alt="">
+            <div class="connect-popup-img-div"><img class="connect-popup-img" src="/assets/img/popup-google-meet-icon.png" alt=""></div>
+          </div>
+         </div>
+        <div class="connect-user-div">
+          <img class="connect-user-img" src="/assets/img/profile-picture.png" alt="">
+          <p class="connect-user-email">beka@pixcell.studio</p>
+        </div>
+       </div>
+        <div>
+          <div class="connect-popup-gap gap3">
+           <div class="connect-popup-text-gap">
+            <h3 class="connect-popup-txt">Companion AI wants to connect Google Meets</h3>
+            <p class="connect-popup-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan lorem faucibus, rhoncus lacus quis, porttitor lacus. Proin 
+              et lorem sapien. Praesent posuere lacus dignissim faucibus tristique. Phasellus ullamcorper id leo vel rutrum. Phasellus a nunc arcu.
+              <br><br>
+              Pellentesque sed magna non lacus pellentesque tincidunt non ac lacus.Proin et lorem sapien. Praesent posuere lacus
+            </p>
+           </div>
+           <div class="connect-popup-btn-div">
+             <button class="connect-popup-cancel-button">Cancel</button>
+             <button class="connect-popup-connect-button">Connect</button>
+           </div>
+          </div>
+        </div>
+     </div>
+  </div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="general-div">
+  <div class="general-left primary-bg-color">
+    <div class="general-bg-image"></div>
+      <a href="">
+        <div class="general-go-back-div">
+          <img src="/assets/img/arrow-left.png" alt="">
+          <h4 class="primary-font-color">Back to home</h4>
+        </div>
+      </a>
+    <form class="general-left-form" action="">
+        <h2 class="primary-font-color">Get <span class="secondary-font-color general-left-form-txt">more</span> from your meetings</h2>
+        <p class="form-border"><svg width="392" height="1" viewBox="0 0 392 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="0.5" x2="392" y2="0.5" stroke="white" stroke-opacity="0.4" stroke-dasharray="10 10"/>
+          </svg>
+          </p>
+        <ul class="primary-font-color general-offer-list-ul">  
+          <li class="general-offer-list-li"> <img src="/assets/img/attach-circle.png" alt=""> Upload and share files easily</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/video.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/messages.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/device-message.png" alt=""> Automatically record, transcribe and store the meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/calendar-edit.png" alt=""> Manage your schedule or view your teammates' scheduled meetings</li>
+          <li class="general-offer-list-li"> <img src="/assets/img/document-text.png" alt=""> Use a common document for the group, work together around the project</li>
+        </ul>
+    </form>
+  </div>
+
+  <div class="general-right secondary-bg-color end-of-auth-flow-right">
+    <div class="verify-email-right-form-gap">
+      <form class="general-right-form email-sent-form" action="">
+        <div class="general-right-form-txts verify-email-right-form-txts">
+          <svg width="184" height="164" viewBox="0 0 184 164" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.15"><path d="M182.904 81.5203C182.356 79.5277 182.127 77.3834 172.081 74.1485C170.993 65.6164 169.215 57.6378 166.295 54.3455C164.962 52.8449 158.898 44.6203 120.009 41.8856C116.93 32.6155 114.853 32.3818 112.923 31.8488C110.993 31.3158 103.907 30.9345 97.1111 30.8033V19.1265C100.166 17.3553 102.222 14.0425 102.222 10.25C102.222 4.5879 97.6468 0 92 0C86.3532 0 81.7778 4.5879 81.7778 10.25C81.7778 14.0425 83.8345 17.3512 86.8889 19.1265V30.8033C80.0932 30.9345 73.0071 31.3158 71.0772 31.8488C69.1472 32.3818 67.07 32.6155 63.9911 41.8856C25.1017 44.6203 19.0379 52.8408 17.7049 54.3455C14.7854 57.6378 13.0067 65.6123 11.9191 74.1485C1.86858 77.3875 1.64371 79.5318 1.09579 81.5203C0.425216 83.9557 0 94.5747 0 102.5C0 110.425 0.425216 121.044 1.09579 123.48C1.64371 125.472 1.87267 127.617 11.9191 130.852C13.0067 139.384 14.7854 147.362 17.7049 150.655C19.3078 152.463 27.7554 164 92 164C156.245 164 164.692 152.463 166.295 150.655C169.215 147.362 170.993 139.388 172.081 130.852C182.131 127.613 182.356 125.468 182.904 123.48C183.575 121.044 184 110.425 184 102.5C184 94.5747 183.575 83.9557 182.904 81.5203ZM147.723 134.603C146.521 135.808 140.183 143.5 92 143.5C43.8165 143.5 37.4787 135.808 36.2766 134.603C30.6299 128.941 30.6667 102.5 30.6667 102.5C30.6667 102.5 30.6299 76.0591 36.2766 70.397C37.4787 69.1916 43.8165 61.5 92 61.5C140.183 61.5 146.521 69.1916 147.723 70.397C153.37 76.0591 153.333 102.5 153.333 102.5C153.333 102.5 153.37 128.941 147.723 134.603Z" fill="#171717"/><path d="M61.3336 123C66.9791 123 71.5558 113.822 71.5558 102.5C71.5558 91.1782 66.9791 82 61.3336 82C55.688 82 51.1113 91.1782 51.1113 102.5C51.1113 113.822 55.688 123 61.3336 123Z" fill="#171717"/><path d="M122.667 123C128.312 123 132.889 113.822 132.889 102.5C132.889 91.1782 128.312 82 122.667 82C117.021 82 112.444 91.1782 112.444 102.5C112.444 113.822 117.021 123 122.667 123Z" fill="#171717"/><path d="M102.223 123C102.223 128.662 97.6473 133.25 92.0005 133.25C86.3538 133.25 81.7783 128.662 81.7783 123H102.223Z" fill="#171717"/></g>
+          </svg>
+          <h3 class="end-of-flow-text">End of Authorisation Flow</h3>
+        </div>         
+      </form>
+
+       <div class="general-submit-div">
+         <button class="general-button">Back to Log in</button>
+         <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Sign up Page</p>
+       </div>  
+    </div>
+  </div>
+</div>
