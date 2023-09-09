@@ -3,24 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'aboniments',
-    loadChildren: () => import('./modules/aboniments/aboniments.module').then(m => m.AbonimentsModule)
-  },
-  {
-    path: 'contacts',
-    loadChildren: () => import('./modules/about-us/about-us.module').then(m => m.AboutUsModule)
-  },
-  {
-    path: 'games',
-    loadChildren: () => import('./modules/games/games.module').then(m => m.GamesModule)
-  },
-  {
     path: 'main',
     loadChildren: () => import('./modules/main/main.module').then(m => m.MainModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: '',
-    redirectTo: 'main',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ];
