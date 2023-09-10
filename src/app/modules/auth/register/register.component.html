@@ -26,8 +26,8 @@
 
 <!--    first-->
     <div class="general-right secondary-bg-color">
-        <div class="create-new-account-right-form-gap" *ngIf="createFirst">
-            <form class="general-right-form" action="" [formGroup]="form">
+        <div class="right-form-gap" *ngIf="createFirst">
+            <form class="general-right-form" action="">
                 <div class="general-right-form-txts">
                     <h3>Create new account</h3>
                     <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
@@ -51,7 +51,7 @@
                                    [class.invalid-input]="form.get('password')!.invalid && form.get('password')!.touched">
                             <p class="sixth-font-color general-error-txt"> &#9679; Password must contain min 1 capital letter</p>
                         </div>
-                        <span class="general-input-icon" style="top: 37%;">
+                        <span class="general-input-icon">
                  <img src="/assets/img/eye.png" alt="">
                </span>
 
@@ -81,7 +81,7 @@
         </div>
         <!--    #first-->
         <!--    second-->
-        <div class="verify-email-right-form-gap" *ngIf="createSecond">
+        <div class="right-form-gap" *ngIf="createSecond">
             <form class="general-right-form email-sent-form" action="">
                 <div class="general-right-form-txts verify-email-right-form-txts">
                     <h3 class="verify-email-title">please verify your email address by following link in your inbox</h3>
@@ -111,7 +111,7 @@
                 </div>
     <!--        first-bar-->
                 <ng-container *ngIf="progressFirst">
-                    <div class="nickname-right-form-gap">
+                    <div class="right-form-gap">
                         <form class="general-right-form nickname-right-form" action="">
                             <div class="general-right-form-txts">
                                 <h3>It’s nice to meet you!</h3>
@@ -128,7 +128,7 @@
     <!--        #first-bar-->
     <!--        second-bar-->
                 <ng-container *ngIf="progressSecond">
-                    <div class="what-brings-you-here-right-form-gap">
+                    <div class="right-form-gap">
                         <form class="general-right-form" action="">
                             <div class="general-right-form-txts">
                                 <h3>What brings you here?</h3>
@@ -201,13 +201,13 @@
     <!--        #second-bar-->
     <!--        third-bar-->
                 <ng-container *ngIf="progressThird">
-                    <div class="workspace-right-form-gap">
+                    <div class="right-form-gap">
                         <form class="general-right-form nickname-right-form" action="">
                             <div class="general-right-form-txts">
                                 <h3>Create your workspace</h3>
                                 <span class="tertiary-font-color general-right-form-txt">Effortlessly share your meeting recordings and notes and retire the phrase “can i get a copy of that recording”.</span>
                             </div>
-                            <input class="general-input" type="text" placeholder="Workspace name" >
+                            <input class="general-input" type="text" placeholder="Workspace name">
                         </form>
                         <div class="general-submit-div">
                             <button class="general-button" (click)="progressA(4)">Next Step</button>
@@ -218,7 +218,7 @@
     <!--        #third-bar-->
     <!--        fourth-bar-->
                 <ng-container *ngIf="progressFourth">
-                    <div class="invite-your-teammate-right-form-gap">
+                    <div class="right-form-gap">
                         <form class="general-right-form nickname-right-form" action="">
                             <div class="general-right-form-txts">
                                 <h3>Invite your team</h3>
@@ -274,7 +274,7 @@
     <!--        #fourth-bar-->
     <!--        fifth-bar-->
                 <ng-container *ngIf="progressFifth">
-                    <div class="connect-platform-right-form-gap">
+                    <div class="right-form-gap">
                         <form class="general-right-form nickname-right-form" action="">
                             <div class="general-right-form-txts">
                                 <h3>Connect your platforms</h3>

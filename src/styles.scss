@@ -560,14 +560,6 @@ input[type=password], select {
         width: 440px;
     }
     
-    .tertiary-font-color {
-        width: 100%;
-        
-    }
-
-    .create-new-account-input-div {
-        align-items: center !important;
-    }
 
     .general-left {
         width: 470px;
@@ -688,6 +680,10 @@ input[type=password], select {
     .general-input {
         width: 420px;
     }
+    .create-new-account-txt{
+        width: 366px;
+        text-align: start;
+    }
 }
 
 
@@ -702,7 +698,9 @@ input[type=password], select {
         width: 320px;
     }
 
-
+    .create-new-account-txt{
+        width: 300px;
+    }
     .general-input {
         width: 320px;
     }
