@@ -85,6 +85,11 @@ html{
     outline-color: rgba(67, 76, 230, 1);
     border: rgba(246, 247, 249, 1);
     background-color: rgba(246, 247, 249, 1);
+
+}
+.invalid-input {
+    background: rgba(234, 67, 53, 0.15);
+    color: rgba(234, 67, 53, 1);
 }
 .general-input-container {
     position: relative;
@@ -153,6 +158,8 @@ html{
     height: 48px;
     font-size: 14px;
     font-weight: 500;
+    cursor: unset;
+    pointer-events: none;
 }
 .general-button:hover{
     background-color:#6970EB;
