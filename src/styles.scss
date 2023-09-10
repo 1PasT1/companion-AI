@@ -575,7 +575,10 @@ input[type=password], select {
     }
 
     .form-border {
-        width:200px;
+        
+        svg{
+            width: 100%;
+        }
     }
 
     .general-go-back-div {
