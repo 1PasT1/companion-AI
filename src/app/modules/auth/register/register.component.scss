@@ -187,3 +187,59 @@
   align-items: center;
 }
 
+
+
+@media only screen and (max-width: 1335px) {
+  .verify-email-title {
+      width: 500px;
+    }
+    .verify-email-title {
+      font-size: 32px;
+    }
+    .verify-email-text {
+      width: 560px;
+      font-size: 15px;
+    }
+    .verify-email-right-form-gap {
+      gap: 130px;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .verify-email-title {
+    width: 500px;
+  }
+
+  .verify-email-text {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .verify-email-title {
+    width: 400px;
+  }
+
+  .verify-email-text {
+    font-size: 14px;
+  }
+
+  .general-button {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (max-width: 445px) {
+  .verify-email-title {
+    width: 305px;
+    line-height: 35px;
+  }
+
+  .verify-email-text {
+    width: 300px;
+    font-size: 14px;
+  }
+
+}

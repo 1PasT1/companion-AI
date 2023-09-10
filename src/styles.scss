@@ -309,6 +309,10 @@ input[type=password], select {
 .general-error-txt{
     font-size: 13px;
     font-weight: 400;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 .general-offer-list-li{
     font-size: 16px;
@@ -527,9 +531,36 @@ input[type=password], select {
         width: 440px;
     }
 
+
+    .create-new-acc-checkbox {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        text-align: start;
+        width: 494px;
+    }
+
+    .create-new-account-input-div {
+        display: flex;
+        flex-direction: column;
+    }
+
     .general-input {
         width: 440px;
     } 
+
+    .general-right-form-txt {
+        width: 440px;
+    }
+    
+    .tertiary-font-color {
+        width: 100%;
+        
+    }
+
+    .create-new-account-input-div {
+        align-items: center !important;
+    }
 
     .general-left {
         width: 470px;
@@ -551,7 +582,7 @@ input[type=password], select {
         margin-top: 2rem;
     }
 }
-@media only screen and (max-width: 940px) {
+    @media only screen and (max-width: 980px) {
     .general-google-btn {
         width: 400px;
         max-width: 100%;
@@ -565,6 +596,11 @@ input[type=password], select {
     .general-left {
         width: 400px;
         max-width: 100%;
+    }
+
+    .general-offer-list-ul {
+
+        gap: 28px;
     }
 
     h4 {
@@ -592,7 +628,7 @@ input[type=password], select {
     }
 
     .general-offer-list-ul {
-        gap: 21px;
+        gap: 21px !important;
     }
 
     h2 {
@@ -649,7 +685,7 @@ input[type=password], select {
 
 @media only screen and (max-width: 507px) {
     h3 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
     
     .general-google-btn {
@@ -676,19 +712,17 @@ input[type=password], select {
     .create-new-account-input-div {
         display: flex;
         flex-direction: column;
-        align-items: center !important;
-
     }
 }
 
 
 @media only screen and (max-width: 410px) {
     h3 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .general-right-form-txt {
-        font-size: 14px;
+        font-size: 13px !important;
         width: 342px;
     }
 
@@ -696,5 +730,44 @@ input[type=password], select {
         gap: 90px !important;
     }
 
+
     
+}
+
+@media only screen and (max-width: 390px) {
+    .right-form-gap {
+        gap: 35px !important;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+    h3 {
+        font-size: 25px !important;
+    }
+    
+    .general-google-btn {
+        width: 300px;
+    }
+
+
+    .general-input {
+        width: 300px;
+    }
+
+    .right-form-gap {
+        gap: 20px !important;
+    }
+
+    .general-button {
+        width: 300px;
+    }
+
+    label {
+        font-size: 11px;
+    }
+
+        .password-reset-right-form-gap {
+        gap: 330px !important;
+    }
 }
