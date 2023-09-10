@@ -1,10 +1,21 @@
 /// autorisation styles ///
 
+.general-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 100% !important;
+}
 .right-form-gap{
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  height: calc(100vh - 130px);
   align-items: center;
+  justify-content: space-between;
 }
 
 
