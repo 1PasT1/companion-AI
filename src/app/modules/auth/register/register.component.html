@@ -27,7 +27,7 @@
 <!--    first-->
     <div class="general-right secondary-bg-color">
         <div class="right-form-gap" *ngIf="createFirst">
-            <form class="general-right-form" action="">
+            <form class="general-right-form" action="" [formGroup]="form">
                 <div class="general-right-form-txts">
                     <h3>Create new account</h3>
                     <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
