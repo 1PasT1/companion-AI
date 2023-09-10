@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit{
     createFirst: boolean = true;
     createSecond: boolean = false
     progressFirst: boolean = false;
@@ -104,5 +104,9 @@ export class RegisterComponent {
             this.styleBarFourth = true;
             this.styleBarFifth = true;
         }
+    }
+
+    ngOnInit() {
+
     }
 }

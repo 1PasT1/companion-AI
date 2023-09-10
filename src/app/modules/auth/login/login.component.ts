@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy{
     this._auth.login(emailValue, passwordValue)
         .pipe(takeUntil(this.destroy$))
         .subscribe((item: any) => {
-          console.log(item)
+          sessionStorage.setItem('authToken', item.token)
         })
   }
 
