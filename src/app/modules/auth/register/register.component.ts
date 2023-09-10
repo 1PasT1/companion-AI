@@ -17,6 +17,8 @@ export class RegisterComponent {
     styleBarFirst: boolean = false;
     styleBarSecond: boolean = false;
     styleBarThird: boolean = false;
+    styleBarFourth: boolean = false;
+    styleBarFifth: boolean = false;
 
     isDropdownOpen = false;
     selectedOption: string | null = null;
@@ -75,6 +77,32 @@ export class RegisterComponent {
             this.styleBarFirst = true;
             this.styleBarSecond = true;
             this.styleBarThird = true;
+        } else if (number === 4) {
+            this.createFirst = false;
+            this.createSecond = false;
+            this.progressFirst = false;
+            this.progressSecond = false;
+            this.progressThird = false;
+            this.progressFourth = true;
+            // for style
+            this.styleBarFirst = true;
+            this.styleBarSecond = true;
+            this.styleBarThird = true;
+            this.styleBarFourth = true;
+        } else if (number === 5) {
+            this.createFirst = false;
+            this.createSecond = false;
+            this.progressFirst = false;
+            this.progressSecond = false;
+            this.progressThird = false;
+            this.progressFourth = false;
+            this.progressFifth = true;
+            // for style
+            this.styleBarFirst = true;
+            this.styleBarSecond = true;
+            this.styleBarThird = true;
+            this.styleBarFourth = true;
+            this.styleBarFifth = true;
         }
     }
 }

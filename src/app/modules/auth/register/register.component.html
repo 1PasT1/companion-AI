@@ -99,12 +99,12 @@
         </div>
         <!--    #second-->
 <!--        progress-bar-section-->
-                <div class="general-progress-border-div" *ngIf="!createFirst && !createSecond">
+                <div class="general-progress-border-div" *ngIf="progressFirst || progressSecond || progressThird || progressFourth || progressFifth">
                     <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarFirst"></div>
                     <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarSecond"></div>
                     <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarThird"></div>
-                    <div class="secondary-border-color general-progress-border"></div>
-                    <div class="secondary-border-color general-progress-border"></div>
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarFourth"></div>
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarFifth"></div>
                 </div>
     <!--        first-bar-->
                 <ng-container *ngIf="progressFirst">
@@ -207,7 +207,7 @@
                             <input class="general-input" type="text" placeholder="Workspace name">
                         </form>
                         <div class="general-submit-div">
-                            <button class="general-button">Next Step</button>
+                            <button class="general-button" (click)="progressA(4)">Next Step</button>
                             <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
                         </div>
                     </div>
@@ -215,16 +215,55 @@
     <!--        #third-bar-->
     <!--        fourth-bar-->
                 <ng-container *ngIf="progressFourth">
-                    <div class="nickname-right-form-gap">
+                    <div class="invite-your-teammate-right-form-gap">
                         <form class="general-right-form nickname-right-form" action="">
                             <div class="general-right-form-txts">
-                                <h3>It’s nice to meet you!</h3>
-                                <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
+                                <h3>Invite your team</h3>
+                                <span class="tertiary-font-color general-right-form-txt">Effortlessly share your meeting recordings and notes and retire the phrase “can i get a copy of that recording”.</span>
                             </div>
-                            <input class="general-input" type="text" placeholder="What woult yo like to be called">
+
+                            <div class="input-button-gap">
+                                <div class="input-container">
+                                    <input class="general-input" type="text" placeholder="Add member’s email">
+
+                                    <!-- <div class="custom-dropdown general-role-select custom-dropdown-large" (click)="toggleDropdownLarge()">
+                                      <div class="selected-option selected-role-option selected-option-large" [style]="dropdownStyleLarge">
+                                        <ng-container *ngIf="selectedOptionLarge; else placeholderTextLarge">
+                                          <span class="selected-text selected-text-large">{{ selectedOptionLarge }}</span>
+                                        </ng-container>
+                                        <ng-template #placeholderTextLarge>
+                                          <span class="placeholder-text placeholder-text-large">
+                                            Role
+                                          </span>
+                                        </ng-template>
+                                        <ng-container *ngIf="isDropdownOpenLarge">
+                                          <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon dropdown-icon-large" (click)="closeDropdownLarge()">
+                                        </ng-container>
+                                        <ng-container *ngIf="!isDropdownOpenLarge">
+                                          <img src="/assets/img/arrow-down.png" alt="Closed Icon" class="dropdown-icon dropdown-icon-large" (click)="openDropdownLarge()">
+                                        </ng-container>
+                                      </div>
+                                      <div class="general-options general-role-options general-options-large" *ngIf="isDropdownOpenLarge" >
+                                        <div class="general-option general-option-large" (click)="selectOptionLarge('Option 1')">Option 1</div>
+                                        <div class="general-option general-option-large" (click)="selectOptionLarge('Option 2')">Option 2</div>
+                                        <div class="general-option general-option-large" (click)="selectOptionLarge('Option 3')">Option 3</div>
+                                      </div>
+                                    </div> -->
+
+                                </div>
+                                <button class="disabled-button">Add new member</button>
+                            </div>
+
+                            <div class="member-list-div">
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture-guest.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Guest</p> <span class="forth-font-color">shako@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Beka@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Ilia@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Andria@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                            </div>
+
                         </form>
                         <div class="general-submit-div">
-                            <button class="general-button">Next Step</button>
+                            <button class="general-button" (click)="progressA(5)">Next Step</button>
                             <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
                         </div>
                     </div>
@@ -232,20 +271,61 @@
     <!--        #fourth-bar-->
     <!--        fifth-bar-->
                 <ng-container *ngIf="progressFifth">
-                    <div class="nickname-right-form-gap">
+                    <div class="connect-platform-right-form-gap">
                         <form class="general-right-form nickname-right-form" action="">
                             <div class="general-right-form-txts">
-                                <h3>It’s nice to meet you!</h3>
-                                <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
+                                <h3>Connect your platforms</h3>
+                                <span class="tertiary-font-color general-right-form-txt connect-platform-right-form-txt">Have your recordings automatically uploaded to Companion AI for enhanced video summaries, transcriptions, and personalized annotations.</span>
                             </div>
-                            <input class="general-input" type="text" placeholder="What woult yo like to be called">
+                            <div class="connect-platform-div">
+                                <div class="connect-platform-box"><img src="/assets/img/zoom-icon.png" alt=""> <p class="tertiary-font-color">Connect Zoom Account</p> <img class="connect-platform-link-icon" src="/assets/img/connect-icon.png" alt=""></div>
+                                <div class="connect-platform-box"><img src="/assets/img/google-meet-icon.png" alt=""> <p class="tertiary-font-color">Google Account is Connected</p> <img src="/assets/img/connected-icon.png" alt=""></div>
+                            </div>
                         </form>
                         <div class="general-submit-div">
-                            <button class="general-button">Next Step</button>
-                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
+                            <button class="general-button" (click)="progressA(6)">OK! Let’s jump in</button>
                         </div>
                     </div>
                 </ng-container>
+                <!--popup-->
+                <ng-container *ngIf="false">
+                    <div class="connect-popup-form-div">
+                        <div class="connect-popup-form">
+                            <div class="connect-popup-gap gap2">
+                                <div class="connect-popup-gap">
+                                    <h3 class="connect-popup-txt">Connect to google Drive</h3>
+                                    <div class="connect-popup-images-div">
+                                        <div class="connect-popup-img-div"><img src="/assets/img/bot-wink3.png" alt=""></div>
+                                        <img src="/assets/img/arrow-2.png" alt="">
+                                        <div class="connect-popup-img-div"><img class="connect-popup-img" src="/assets/img/popup-google-meet-icon.png" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="connect-user-div">
+                                    <img class="connect-user-img" src="/assets/img/profile-picture.png" alt="">
+                                    <p class="connect-user-email">beka@pixcell.studio</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="connect-popup-gap gap3">
+                                    <div class="connect-popup-text-gap">
+                                        <h3 class="connect-popup-txt">Companion AI wants to connect Google Meets</h3>
+                                        <p class="connect-popup-description">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan lorem faucibus, rhoncus lacus quis, porttitor lacus. Proin
+                                            et lorem sapien. Praesent posuere lacus dignissim faucibus tristique. Phasellus ullamcorper id leo vel rutrum. Phasellus a nunc arcu.
+                                            <br><br>
+                                            Pellentesque sed magna non lacus pellentesque tincidunt non ac lacus.Proin et lorem sapien. Praesent posuere lacus
+                                        </p>
+                                    </div>
+                                    <div class="connect-popup-btn-div">
+                                        <button class="connect-popup-cancel-button">Cancel</button>
+                                        <button class="connect-popup-connect-button">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!--#popup-->
     <!--        #fifth-bar-->
 <!--        #progress-bar-section-->
     </div>

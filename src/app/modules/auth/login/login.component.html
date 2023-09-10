@@ -27,7 +27,7 @@
 
     <div class="general-right secondary-bg-color">
         <div class="right-form-gap">
-            <form class="general-right-form" action="">
+            <form class="general-right-form" action="" [formGroup]="form">
                 <div class="general-right-form-txts">
                     <h3>Hello again!</h3>
                     <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
@@ -40,9 +40,11 @@
                 </a>
                 <p class="fifth-font-color">or</p>
                 <div class="general-input-div">
-                    <input class="general-input" type="email" placeholder="Email Address">
+                    <input class="general-input" type="email" placeholder="Email Address" formControlName="email"
+                    [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
                     <div class="general-input-container">
-                        <input class="general-input" type="password" placeholder="Password">
+                        <input class="general-input" type="password" placeholder="Password" formControlName="password"
+                               [class.invalid-input]="form.get('password')!.invalid && form.get('email')!.touched">
                         <span class="general-input-icon">
                  <img src="/assets/img/eye.png" alt="">
                </span>
@@ -60,7 +62,9 @@
                 </div>
             </form>
             <div class="general-submit-div">
-                <button class="general-button">Sign In</button>
+                <button class="general-button" (click)="login()"
+                        [class.general-button-disabled]="form.get('email')!.invalid || form.get('password')!.invalid"
+                >Sign In</button>
                 <p class="tertiary-font-color general-button-bottom-txt">New to Companion AI? <a routerLink="../register">Create account?</a></p>
             </div>
         </div>
