@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AuthService} from "../../../core/services/auth.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Subject, takeUntil} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import {Subject, takeUntil} from "rxjs";
 export class LoginComponent implements OnInit, OnDestroy{
   destroy$: Subject<boolean> = new Subject<boolean>();
   form: FormGroup;
-  constructor(private _auth: AuthService, private fb: FormBuilder) {
+  constructor(private _auth: AuthService, private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit() {
@@ -32,6 +33,9 @@ export class LoginComponent implements OnInit, OnDestroy{
         .pipe(takeUntil(this.destroy$))
         .subscribe((item: any) => {
           sessionStorage.setItem('authToken', item.token)
+          if (!item['error']) {
+            this.router.navigate(['/home']);
+          }
         })
   }
 
